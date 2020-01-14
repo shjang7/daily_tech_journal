@@ -1,17 +1,38 @@
 # daily_tech_journal
+### Data structures
+
+```
+data structures /
+├─ array
+├─ linked list
+└─ ...
+```
+##### The differences between Array and Linked list (14.jan.2020)
+
+The Array is a consistent set of a fixed number of data items. And the Linked list is an ordered set comprising a variable number of data items.
+
+The indexes directly or randomly access the Array. But the Linked list is sequentially accessed, traverse starting from the first node in the list by the pointer.
+
+The Array relatively slow at insertion or deletion as shifting is required, but the Linked list is effective, fast and efficient for that.
+
+However, access time in memory of Linked list is slower. Because, While Array elements physically assigned consecutively in the hardware memory during compile time, Linked list elements are stored randomly in hardware during the run time.
+
+The linear search can search them both. But Array can be searched by binary search, while Linked list is not.
+
+
 ### An introduction about Rails 6 framework
 
 This writing is to introduce Rails framework which is a server-side web app framework to a person new to and inexperienced in Rails.
 
 ```
 source /
-├─ app
+├─ app /
 │  ├─ controllers
 │  ├─ models
 │  └─ views
-├─ config
+├─ config /
 │  └─ routes
-└─ db
+└─ db /
    └─ migrate
 ```
 

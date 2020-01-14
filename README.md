@@ -2,6 +2,21 @@
 
 ## Computer Networking
 
+#### TCP - Three-Way Handshake (14.jan.2020)
+
+We supposed to try a network connection such as opening google.com, what is going to have happened?
+
+1. A client sends to server SYN packet which contains sequence numbers that support the server can connect client; this step is like "Hey, do you want to talk?"
+2. The server sends back to the client SYN/ACK packet with the help of sequence numbers; this step is like "Yeah, I received your message, do you want to talk?"
+3. Then the client sends ACK packet to the server, like "Yes, let's talk."
+
+=> After this three-way Handshake occurs, the connection is established between the server and the client. Now the packets between them can be transmitted. The protocols loading over TCP is HTTP, FTP, SMTP and SSH.
+
+As it has an opening connection, it also has a closing connection.
+
+1. The client sends the server SYN/ACK packet; "There is no need connection, wants to leave."
+2. The server sends back to the client ACK packet, "Yes, I know that you want to leave, then bye."
+3. The client sends back to the server ACK packet, "Yes, bye!"
 
 ## An introduction about Rails 6 framework
 
@@ -9,12 +24,15 @@ This writing is to introduce Rails framework which is a server-side web app fram
 
 ```
 source /
+│
 ├─ app /
 │  ├─ controllers
 │  ├─ models
 │  └─ views
+│
 ├─ config /
 │  └─ routes
+│
 └─ db /
    └─ migrate
 ```
@@ -33,9 +51,11 @@ The controller receives events from the outside world, usually through views. It
 
 ```
 source /
+│
 ├─ app /
-│  └─ controllers
+│  └─ controllers /
 │     └─ users_controller.rb
+│
 └─ config /
    └─ routes.rb
 
@@ -53,17 +73,21 @@ The Router in rails navigates the URL or path to proper controllers. For example
 ## Data structures
 
 ```
-Data structures /
+Data structures
+│
 ├─ Linear data structures
 │  ├─ Array
 │  ├─ Linked list
 │  ├─ Stack
 │  └─ Queue
+│
 └─ Non linear data structures
+   │
    ├─ Graphs
    ├─ Trees
    ├─ Trie
    └─ HashTable
+      │
       ├─ Set
       └─ Map
 ```

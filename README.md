@@ -1,8 +1,75 @@
 # daily_tech_journal
 
-## Computer Networking
+# Computer Networking
 
-#### TCP - Three-Way Handshake (14.jan.2020)
+## Network Layers
+
+Two computers communicate help of network connection. But, if this two has different OS or architecture or even different capacity of data acceptance speed,
+how they can communicate with each other in real-time.
+
+#### Five-layer internet protocol stack (15.jan.2020)
+
+```
+Protocol stack
+│
+├─ Application
+├─ Transport
+├─ Network
+├─ Link
+└─ Physical
+```
+
+Each layers is a package of protocols.
+
+The Application layer includes some protocols, such as the HTTP, SMTP, FTP protocol. It also does transmitting human-readable url domain to the actual address.
+Application layer data transported by TCP, UDP protocols in the Transport layer.
+
+Network layer moves Datagram packets from one host to another.
+The Network layer combines Transport layer segment and a destination address, like a postal service a letter with a destination address.
+
+The Network layer passes the Datagram down to the Link layer, and the Link layer passes the Datagram up to the Network layer.
+
+Finally, the job of the Physical layer is to move the individual bits within the frame from one node to the next.
+
+But we should mention that it has not only protocol stack around. The network can be organized around seven layers which is OSI (Open System Interconnection) model.
+
+#### 7 layers of OSI model (15.jan.2020)
+
+```
+OSI model
+│
+├─ Application
+├─ Presentation
+├─ Session
+├─ Transport
+├─ Network
+├─ Data link
+└─ Physical
+```
+
+OSI(Open System Interconnection) model has 7 layers.
+
+Application layer includes HTTP, FTP, SMTP, ... protocols. That provides services of network applications such as Chrome, Firefox, Outlook, Skype, etc.
+
+Presentation layer receives data from the Application layer. This data is the form of characters and numbers and translated to
+machine understandable binary format. And Presentation layer compresses this data for faster sending, also does encryption or decryption.
+
+Session layer helps session management, authentication, authorization.
+
+The Transport layer is envolved segmentation, flow control for speed differences, error control, connection-oriented and connection-less transmission.
+
+The Transport layer provides various forms of process-to-process communication by relying on the network layer's host-to-host communication service.
+
+The function of the Network layer is logical addressing of IPv4 and IPv6, path determination and Routing. When the data arrives, the Routing does finding where to move data with the separation of host and computer address.
+
+Their has two types of addressing, logical addressing is from the Network layer, and physical addressing is from Data link layer.
+The Data link layer is embedded as software in the network interface card of the computer.
+
+Physical layer considered by the data communication through optic, electrical transmitting information.
+
+### TCP
+
+#### Three-Way Handshake (14.jan.2020)
 
 We supposed to try a network connection such as opening google.com, what is going to have happened?
 
@@ -18,7 +85,7 @@ As it has an opening connection, it also has a closing connection.
 2. The server sends back to the client ACK packet, "Yes, I know that you want to leave, then bye."
 3. The client sends back to the server ACK packet, "Yes, bye!"
 
-## An introduction about Rails 6 framework
+# An introduction about Rails 6 framework
 
 This writing is to introduce Rails framework which is a server-side web app framework to a person new to and inexperienced in Rails.
 
@@ -70,7 +137,7 @@ source /
 
 The Router in rails navigates the URL or path to proper controllers. For example, the Router 'users URL' called by external links such as user input or command line, then it will connect to 'users_controller' 'index' method.
 
-## Data structures
+# Data structures
 
 ```
 Data structures

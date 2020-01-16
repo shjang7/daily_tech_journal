@@ -1,5 +1,45 @@
 # daily_tech_journal
 
+# Data structures
+
+```
+Data structures (non-primitive)
+│
+├─ Linear data structures
+│  ├─ Array
+│  ├─ Linked list
+│  ├─ Stack
+│  └─ Queue
+│
+└─ Non linear data structures
+   │
+   ├─ Graphs
+   ├─ Trees
+   ├─ Trie
+   └─ HashTable
+      │
+      ├─ Set
+      └─ Map
+```
+
+#### The differences between Stack and Queue (16.jan.2020)
+
+Queue uses First Input First Output (FIFO). For instance, the people wait for a queue to hop on the bus, the first person in the line will get on the bus.
+
+Stack uses Last Input First Output (LIFO). For example, when I put one piece of paper on the stack of papers, some others will pick first that paper what I put from the pile.
+
+#### The differences between Array and Linked list (14.jan.2020)
+
+The Array is a consistent set of a fixed number of data items. And the Linked list is an ordered set comprising a variable number of data items.
+
+The indexes directly or randomly access the Array. But the Linked list is sequentially accessed, traverse starting from the first node in the list by the pointer.
+
+The Array relatively slow at insertion or deletion as shifting is required, but the Linked list is effective, fast and efficient for that.
+
+However, access time in memory of Linked list is slower. Because, While Array elements physically assigned consecutively in the hardware memory during compile time, Linked list elements are stored randomly in hardware during the run time.
+
+The linear search can search them both. But Array can be searched by binary search, while Linked list is not.
+
 # Computer Networking
 
 ## Network Layers
@@ -136,37 +176,3 @@ source /
 ```
 
 The Router in rails navigates the URL or path to proper controllers. For example, the Router 'users URL' called by external links such as user input or command line, then it will connect to 'users_controller' 'index' method.
-
-# Data structures
-
-```
-Data structures
-│
-├─ Linear data structures
-│  ├─ Array
-│  ├─ Linked list
-│  ├─ Stack
-│  └─ Queue
-│
-└─ Non linear data structures
-   │
-   ├─ Graphs
-   ├─ Trees
-   ├─ Trie
-   └─ HashTable
-      │
-      ├─ Set
-      └─ Map
-```
-
-#### The differences between Array and Linked list (14.jan.2020)
-
-The Array is a consistent set of a fixed number of data items. And the Linked list is an ordered set comprising a variable number of data items.
-
-The indexes directly or randomly access the Array. But the Linked list is sequentially accessed, traverse starting from the first node in the list by the pointer.
-
-The Array relatively slow at insertion or deletion as shifting is required, but the Linked list is effective, fast and efficient for that.
-
-However, access time in memory of Linked list is slower. Because, While Array elements physically assigned consecutively in the hardware memory during compile time, Linked list elements are stored randomly in hardware during the run time.
-
-The linear search can search them both. But Array can be searched by binary search, while Linked list is not.

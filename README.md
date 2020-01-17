@@ -1,4 +1,23 @@
-# daily_tech_journal
+# Daily Tech Journal
+
+# Software design pattern
+
+Object-oriented languages are manageable to implementing software design patterns. Patterns help improve developer communication. But like always, uses of patterns should not be overloaded more than practical reason.
+
+#### Singleton Pattern (17.jan.2020)
+
+We use this if we want to limit the creation of the class into one object only.
+ex) User Interface, Game Board
+
+But it should be used in a limited way. This pattern doesn't fit with a multi-thread system while it can generate only one instance. Also, it could be violating the single responsibility rule. As a conclusion, this pattern needs carefully used.
+
+#### Factory Pattern (17.jan.2020)
+
+When we create a object, this pattern secures producing the same instances.
+
+#### Abstract Factory Pattern (17.jan.2020)
+
+The customer application can access to use of factory with no knowledge of conception through an interface of factories.
 
 # Data structures
 

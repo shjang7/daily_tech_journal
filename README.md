@@ -1,6 +1,35 @@
 # Daily Tech Journal
 
-# Software design pattern
+
+## Asymptotic notation
+
+#### *Θ*, *O*, *Ω*, *o*, *ω* notations (20.jan.2020)
+For the small size algorithm, the task ends very fast regardless of the effectiveness.
+But when the input size is big enough, the efficiency becomes an issue.
+So, to calculate the execution time of an algorithm, always we analyze the time for big sized input case, aka Asymptotic notation.
+
+First, Look the three notations.
+**Big *Θ*** (theta) notation means an **asymptotic increasing rate** of an algorithm. *Θ*(*f*(*n*)) is a group of matching asymptotic increasing rate with *f*(*n*). For example,
+```sh
+5n² + 4n + 6 = Θ(n²)
+```
+
+**Big *O*** notation means asymptotic **upper bound** of increasing rate, and it calculates **worst case**.
+And **Big *Ω*** (omega) notation means an asymptotic **lower bound** of increasing rate, and it calculates the **best case**.
+
+And look deep into the strict definition.
+It also has **Little *o*** and **Little *ω***.
+**Little *o*** means asymptotic **strict upper bound** of increasing rate.
+```sh
+5n = O(n)
+5n = o(n²)
+```
+**Little *ω*** means asymptotic **strict lower bound** of increasing rate.
+```sh
+5n = ω(n)
+```
+
+## Software design pattern
 
 Object-oriented languages are manageable to implementing software design patterns. Patterns help improve developer communication. But like always, uses of patterns should not be overloaded more than practical reason.
 
@@ -19,7 +48,7 @@ When we create a object, this pattern secures producing the same instances.
 
 The customer application can access to use of factory with no knowledge of conception through an interface of factories.
 
-# Data structures
+## Data structures
 
 ```
 Data structures (non-primitive)
@@ -59,9 +88,9 @@ However, access time in memory of Linked list is slower. Because, While Array el
 
 The linear search can search them both. But Array can be searched by binary search, while Linked list is not.
 
-# Computer Networking
+## Computer Networking
 
-## Network Layers
+### Network Layers
 
 Two computers communicate help of network connection. But, if this two has different OS or architecture or even different capacity of data acceptance speed,
 how they can communicate with each other in real-time.
@@ -144,7 +173,7 @@ As it has an opening connection, it also has a closing connection.
 2. The server sends back to the client ACK packet, "Yes, I know that you want to leave, then bye."
 3. The client sends back to the server ACK packet, "Yes, bye!"
 
-# An introduction about Rails 6 framework
+## An introduction about Rails 6 framework
 
 This writing is to introduce Rails framework which is a server-side web app framework to a person new to and inexperienced in Rails.
 

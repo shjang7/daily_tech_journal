@@ -1,5 +1,8 @@
 # Daily Tech Journal
 
+## Rails
+#### ActionCable (21.jan.2020)
+Web applications are giving service using the HTTP protocol, half-duplex communication between server and client. For example, chatting app needs to send info from server to client, it uses polling in background service. But, rails 5.0 ActionCable integrates WebSockets to enable bidirectional simultaneous communication between server and client.
 
 ## Asymptotic notation
 

@@ -1,5 +1,19 @@
 # Daily Tech Journal
 
+## Ruby on Rails
+### The advantages of using Ruby on Rails (23.jan.2020)
+#### Faster development time
+Ruby on Rails minimizes the website development time by 25-50% as compared to other popular web frameworks.
+
+It has many ready-made plugins which are gems, MVC structure, modular design, object-oriented, and huge open-source communities.
+
+### Additional advantages of using Ruby (23.jan.2020)
+#### Clean and Simple Syntax
+The syntax is modest and compact, which empowers developers to solve complex problems with fewer lines of code. It supports the human-readable code as well.
+
+#### Metaprogramming
+Ruby can be designed to read or transform other programs, and even modify itself while running.
+
 ## Javascript
 
 ### Asynchronous

@@ -1,8 +1,76 @@
 # Daily Tech Journal
 
+## Javascript
+
+### Asynchronous
+The response time after sending a request to the server could be slower than code execution time. So we need to use the asynchronous function.
+
+#### Async-await (22.jan.2020)
+Async function is written like just general function, but it works like promise function.
+
+An Async function can involve Await; it pauses Async function and waits for promise work; it resumes Async function and returns a result. While the Async function breaks, the calling function runs continuously.
+
+Await keyword only works in an Async function. If we use this out of Async function, it will get a syntax error.
+
 ## Rails
+
+### WebSockets
+
 #### ActionCable (21.jan.2020)
 Web applications are giving service using the HTTP protocol, half-duplex communication between server and client. For example, chatting app needs to send info from server to client, it uses polling in background service. But, rails 5.0 ActionCable integrates WebSockets to enable bidirectional simultaneous communication between server and client.
+
+### An introduction about Rails 6 framework
+
+This writing is to introduce Rails framework which is a server-side web app framework to a person new to and inexperienced in Rails.
+
+```
+source /
+│
+├─ app /
+│  ├─ controllers
+│  ├─ models
+│  └─ views
+│
+├─ config /
+│  └─ routes
+│
+└─ db /
+   └─ migrate
+```
+
+#### MVC (13.jan.2020)
+
+Rails has a model-view-controller (MVC) design pattern. It presents default structures for a database, a web service, and web pages. I am going to talk about this today.
+
+The model contains data for application and often linked to a database. And it has an order which can be used for business purpose. And it does not know user interface; it means it can be reused.
+
+The view generates the user interface, which presents data to the users. Many views can access the same model for different reasons. Once the view created, the data is displayed to the users.
+
+The controller receives events from the outside world, usually through views. It interacts with the model and displays the appropriate view to the users.
+
+#### Routes (14.jan.2020)
+
+```
+source /
+│
+├─ app /
+│  └─ controllers /
+│     └─ users_controller.rb
+│
+└─ config /
+   └─ routes.rb
+
+[ users_controller.rb ]
+  def index
+    @users = User.all
+  end
+
+[ routes.rb ]
+  get 'users#index', as: :users
+```
+
+The Router in rails navigates the URL or path to proper controllers. For example, the Router 'users URL' called by external links such as user input or command line, then it will connect to 'users_controller' 'index' method.
+
 
 ## Asymptotic notation
 
@@ -175,55 +243,3 @@ As it has an opening connection, it also has a closing connection.
 1. The client sends the server SYN/ACK packet; "There is no need connection, wants to leave."
 2. The server sends back to the client ACK packet, "Yes, I know that you want to leave, then bye."
 3. The client sends back to the server ACK packet, "Yes, bye!"
-
-## An introduction about Rails 6 framework
-
-This writing is to introduce Rails framework which is a server-side web app framework to a person new to and inexperienced in Rails.
-
-```
-source /
-│
-├─ app /
-│  ├─ controllers
-│  ├─ models
-│  └─ views
-│
-├─ config /
-│  └─ routes
-│
-└─ db /
-   └─ migrate
-```
-
-#### MVC (13.jan.2020)
-
-Rails has a model-view-controller (MVC) design pattern. It presents default structures for a database, a web service, and web pages. I am going to talk about this today.
-
-The model contains data for application and often linked to a database. And it has an order which can be used for business purpose. And it does not know user interface; it means it can be reused.
-
-The view generates the user interface, which presents data to the users. Many views can access the same model for different reasons. Once the view created, the data is displayed to the users.
-
-The controller receives events from the outside world, usually through views. It interacts with the model and displays the appropriate view to the users.
-
-#### Routes (14.jan.2020)
-
-```
-source /
-│
-├─ app /
-│  └─ controllers /
-│     └─ users_controller.rb
-│
-└─ config /
-   └─ routes.rb
-
-[ users_controller.rb ]
-  def index
-    @users = User.all
-  end
-
-[ routes.rb ]
-  get 'users#index', as: :users
-```
-
-The Router in rails navigates the URL or path to proper controllers. For example, the Router 'users URL' called by external links such as user input or command line, then it will connect to 'users_controller' 'index' method.

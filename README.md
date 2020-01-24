@@ -1,5 +1,103 @@
 # Daily Tech Journal
 
+## Ruby
+### Closures (24.jan.2020)
+Closures often pass into a function as a parameter, a particular part in the function can call the closure.
+Closures have Blocks, Procs and Lambda's.
+
+#### Blocks
+```sh
+class Array
+  def some_func
+    self.each do |n|
+      ...
+      x = yield(n)    (n = 3 => 3 ** 2 => 9)
+      ...
+    end
+  end
+end
+
+array = [1,2,3,4,5]
+array2 = [11,14,20,24,25]
+array.some_func do | n |
+    n ** 2
+end
+array2.some_func do | n |
+    n ** 2
+end
+```
+
+The Block is a snipped code, after passing into a function, it can be executed with the 'yield' in the function.
+If we want to use the same Block to another array2 or array3, to prevent repeating it, we could use Procs or Lambda's.
+
+#### Procs
+```sh
+class Array
+  def some_func(s)
+    self.each do |n|
+      ...
+      x = s.call(n)    (n = 3 => 3 ** 2 => 9)
+      ...
+    end
+  end
+end
+
+array = [1,2,3,4,5]
+array2 = [11,14,20,24,25]
+square = Proc.new do | n |
+    n ** 2
+end
+array.some_func(square)
+array2.some_func(square)
+```
+
+#### Lambda's
+```
+class Array
+  def some_func(s)
+    self.each do |n|
+      ...
+      x = s.call(n)    (n = 3 => 3 ** 2 => 9)
+      ...
+    end
+  end
+end
+
+array = [1,2,3,4,5]
+a = lambda do |n|
+  n ** 2
+end
+array.some_func(a)
+```
+
+Uses of Lambda looks similar to Proc.
+The difference is that, while Proc doesn't check parameter count, lambda checks parameter count.
+```
+def some_func(b)
+  b.call(1, 2)
+end
+some_func(Proc.new{ |a, b, c| print a, b, c }) => c == null
+some_func(lambda{ |a, b, c| print a, b, c }) => wrong number of parameters error
+```
+
+For another difference,
+```
+def first
+  Proc.new { return 'a' }.call
+  return 'b'
+end
+
+def second
+  lambda { return 'a' }.call
+  return 'b'
+end
+
+print first #=> 'a'
+print second #=> 'b'
+```
+Proc works like code snippet, and once it has seen the return statement, it returns directly.
+But lambda works like a keyword, and it will read the function until the end of the line.
+
 ## Ruby on Rails
 ### The advantages of using Ruby on Rails (23.jan.2020)
 #### Faster development time

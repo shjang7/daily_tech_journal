@@ -1,5 +1,52 @@
 # Daily Tech Journal
 
+## Data structures
+
+```
+Data structures (non-primitive)
+│
+├─ Linear data structures
+│  ├─ Array
+│  ├─ Linked list
+│  ├─ Stack
+│  └─ Queue
+│
+└─ Non linear data structures
+   │
+   ├─ Graphs
+   ├─ Trees
+   ├─ Trie
+   └─ HashTable
+      │
+      ├─ Set
+      └─ Map
+```
+
+#### The differences between Set and Map (27.jan.2020)
+Set or Map can be stored in computer memory with an order or as a Hashmap Table.
+The case of storing with order is useful to have sorted order, but we could have constant time efficiency using Hashmap Table. So the purpose of using it should be considered, and it needs trade-off for the circumstance.
+
+Set is a mathematical terminology to use in computer programming; it indicates whether an element contained in a Set or not.
+And Map is used to store key-value pairs, and this can solve Graph algorithm, frequency algorithm.
+
+#### The differences between Stack and Queue (16.jan.2020)
+
+Queue uses First Input First Output (FIFO). For instance, the people wait for a queue to hop on the bus, the first person in the line will get on the bus.
+
+Stack uses Last Input First Output (LIFO). For example, when I put one piece of paper on the stack of papers, some others will pick first that paper what I put from the pile.
+
+#### The differences between Array and Linked list (14.jan.2020)
+
+The Array is a consistent set of a fixed number of data items. And the Linked list is an ordered set comprising a variable number of data items.
+
+The indexes directly or randomly access the Array. But the Linked list is sequentially accessed, traverse starting from the first node in the list by the pointer.
+
+The Array relatively slow at insertion or deletion as shifting is required, but the Linked list is effective, fast and efficient for that.
+
+However, access time in memory of Linked list is slower. Because, While Array elements physically assigned consecutively in the hardware memory during compile time, Linked list elements are stored randomly in hardware during the run time.
+
+The linear search can search them both. But Array can be searched by binary search, while Linked list is not.
+
 ## Ruby
 ### Closures (24.jan.2020)
 Closures often pass into a function as a parameter, a particular part in the function can call the closure.
@@ -230,46 +277,6 @@ When we create a object, this pattern secures producing the same instances.
 #### Abstract Factory Pattern (17.jan.2020)
 
 The customer application can access to use of factory with no knowledge of conception through an interface of factories.
-
-## Data structures
-
-```
-Data structures (non-primitive)
-│
-├─ Linear data structures
-│  ├─ Array
-│  ├─ Linked list
-│  ├─ Stack
-│  └─ Queue
-│
-└─ Non linear data structures
-   │
-   ├─ Graphs
-   ├─ Trees
-   ├─ Trie
-   └─ HashTable
-      │
-      ├─ Set
-      └─ Map
-```
-
-#### The differences between Stack and Queue (16.jan.2020)
-
-Queue uses First Input First Output (FIFO). For instance, the people wait for a queue to hop on the bus, the first person in the line will get on the bus.
-
-Stack uses Last Input First Output (LIFO). For example, when I put one piece of paper on the stack of papers, some others will pick first that paper what I put from the pile.
-
-#### The differences between Array and Linked list (14.jan.2020)
-
-The Array is a consistent set of a fixed number of data items. And the Linked list is an ordered set comprising a variable number of data items.
-
-The indexes directly or randomly access the Array. But the Linked list is sequentially accessed, traverse starting from the first node in the list by the pointer.
-
-The Array relatively slow at insertion or deletion as shifting is required, but the Linked list is effective, fast and efficient for that.
-
-However, access time in memory of Linked list is slower. Because, While Array elements physically assigned consecutively in the hardware memory during compile time, Linked list elements are stored randomly in hardware during the run time.
-
-The linear search can search them both. But Array can be searched by binary search, while Linked list is not.
 
 ## Computer Networking
 

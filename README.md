@@ -1,5 +1,9 @@
 # Daily Tech Journal
 
+## React
+#### Why Hooks are preferred than using classes (28.jan.2020)
+Hooks provide intuitive API such as useState, useEffect. Using Hooks, we can abstract state-related logic, and it enables us to reuse and share that logic.
+
 ## Data structures
 
 ```

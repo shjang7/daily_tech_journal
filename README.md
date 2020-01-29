@@ -1,6 +1,39 @@
 # Daily Tech Journal
 
 ## General Web
+#### Class method, aka. static method (30.jan.2020)
+- c++
+```
+Class Robot {
+  static void hi(name) {
+    cout << name << ' hi!!';
+  }
+}
+```
+- ruby
+```
+Class Robot
+  def self.hi(name)
+    print `${name} hi!!`
+  end
+end
+```
+
+The Class method used to be called as a static method. When the class loads, this static method prepared in memory. The Static method or static variables can be accessed everywhere in application like class.
+
+- class method
+```
+human_name = 'suhy'
+Robot.hi(human_name)
+>> suhy hi!!
+```
+- instance method
+```
+my_dog = Dog('warr')
+my_dog.bark()
+>> Woof Woof
+```
+
 #### The differences between Session and Cookie (29.jan.2020)
 It is different from the data saving place of user's information.
 Cookie does not use server's resources, Session uses server's resources.

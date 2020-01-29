@@ -1,5 +1,11 @@
 # Daily Tech Journal
 
+## General Web
+#### The differences between Session and Cookie (29.jan.2020)
+It is different from the data saving place of user's information.
+Cookie does not use server's resources, Session uses server's resources.
+The session has better at security, and Cookie has better response speed.
+
 ## React
 #### Why Hooks are preferred than using classes (28.jan.2020)
 Hooks provide intuitive API such as useState, useEffect. Using Hooks, we can abstract state-related logic, and it enables us to reuse and share that logic.

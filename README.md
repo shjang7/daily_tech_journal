@@ -1,6 +1,16 @@
 # Daily Tech Journal
 
-## General Web
+## Testing Software
+#### The importance of testing (31.jan.2020)
+If a business application doesn't work correctly, the manufacturers can lose the business image, time, money, for some case life as well.
+
+The software test is very important in the reasons above, but for the faster development, a company can overlook building software without the test.
+
+The purposes of the test are checking software working well, but also the satisfaction of the software specifications.
+
+The test can be done by a unit or an integration test. The unit test helps us to write smaller and full-fill single-responsibility code condition. Another advantages of unit test are catching the problems early, more straightforward integration, and improving the architecture.
+
+## General Programming
 #### Class method, aka. static method (30.jan.2020)
 - c++
 ```

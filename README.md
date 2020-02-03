@@ -1,5 +1,69 @@
 # Daily Tech Journal
 
+<details>
+  <summary style="font-size: 2rem; font-weight: 600; color: white;">Software design pattern</summary>
+
+```
+├─ Creational Pattern
+│  │
+│  ├─ Factory Method
+│  ├─ Abstract Factory
+│  ├─ Builder
+│  ├─ Prototype
+│  └─ Singleton
+│
+├─ Behavioral Pattern
+│  │
+│  ├─ Chain of Responsibility
+│  ├─ Command
+│  ├─ Exchange role
+│  ├─ Iterator
+│  ├─ Interpreter
+│  ├─ Mediator
+│  ├─ Memento
+│  ├─ Observer
+│  ├─ State
+│  ├─ Strategy
+│  ├─ Template method
+│  └─ Visitor
+│
+└─ Structural Pattern
+   │
+   ├─ Adapter
+   ├─ Bridge
+   ├─ Composite
+   ├─ Decorator
+   ├─ Facade
+   ├─ Flyweight
+   └─ Proxy
+```
+</details>
+
+Object-oriented languages are manageable to implementing software design patterns. Patterns help improve developer communication. But like always, uses of patterns should not be overloaded more than practical reason.
+
+### Behavioral Pattern (03.feb.2020)
+For example, there is a lion and a cheetah.
+The common Behavioral between them is hunting animals, living in the yard.
+If it has a parent class like Wild animals, then the Lion and Cheetah class can inherit it and implemented detail.
+
+ex) Template Method
+
+### Creational Pattern
+#### Singleton Pattern (17.jan.2020)
+
+We use this if we want to limit the creation of the class into one object only.
+ex) User Interface, Game Board
+
+But it should be used in a limited way. This pattern doesn't fit with a multi-thread system while it can generate only one instance. Also, it could be violating the single responsibility rule. As a conclusion, this pattern needs carefully used.
+
+#### Factory Method (17.jan.2020)
+
+When we create a object, this pattern secures producing the same instances.
+
+#### Abstract Factory (17.jan.2020)
+
+The customer application can access to use of factory with no knowledge of conception through an interface of factories.
+
 ## Testing Software
 #### The importance of testing (31.jan.2020)
 If a business application doesn't work correctly, the manufacturers can lose the business image, time, money, for some case life as well.
@@ -12,25 +76,28 @@ The test can be done by a unit or an integration test. The unit test helps us to
 
 ## General Programming
 #### Class method, aka. static method (30.jan.2020)
+
+The Class method used to be called as a static method. When the class loads, this static method prepared in memory. The Static method or static variables can be accessed everywhere in application like class.
+
+<details>
+  <summary style="">Example</summary>
+
 - c++
 ```
 Class Robot {
-  static void hi(name) {
-    cout << name << ' hi!!';
-  }
+    static void hi(name) {
+      cout << name << ' hi!!';
+    }
 }
 ```
 - ruby
 ```
 Class Robot
-  def self.hi(name)
-    print `${name} hi!!`
-  end
+    def self.hi(name)
+      print `${name} hi!!`
+    end
 end
 ```
-
-The Class method used to be called as a static method. When the class loads, this static method prepared in memory. The Static method or static variables can be accessed everywhere in application like class.
-
 - class method
 ```
 human_name = 'suhy'
@@ -43,6 +110,7 @@ my_dog = Dog('warr')
 my_dog.bark()
 >> Woof Woof
 ```
+</details>
 
 #### The differences between Session and Cookie (29.jan.2020)
 It is different from the data saving place of user's information.
@@ -106,52 +174,66 @@ Closures often pass into a function as a parameter, a particular part in the fun
 Closures have Blocks, Procs and Lambda's.
 
 #### Blocks
-```sh
-class Array
-  def some_func
-    self.each do |n|
-      ...
-      x = yield(n)    (n = 3 => 3 ** 2 => 9)
-      ...
-    end
-  end
-end
-
-array = [1,2,3,4,5]
-array2 = [11,14,20,24,25]
-array.some_func do | n |
-    n ** 2
-end
-array2.some_func do | n |
-    n ** 2
-end
-```
 
 The Block is a snipped code, after passing into a function, it can be executed with the 'yield' in the function.
 If we want to use the same Block to another array2 or array3, to prevent repeating it, we could use Procs or Lambda's.
 
-#### Procs
-```sh
-class Array
-  def some_func(s)
-    self.each do |n|
-      ...
-      x = s.call(n)    (n = 3 => 3 ** 2 => 9)
-      ...
+<details>
+  <summary>example</summary>
+
+  ```sh
+  class Array
+    def some_func
+      self.each do |n|
+        ...
+        x = yield(n)    (n = 3 => 3 ** 2 => 9)
+        ...
+      end
     end
   end
-end
 
-array = [1,2,3,4,5]
-array2 = [11,14,20,24,25]
-square = Proc.new do | n |
-    n ** 2
-end
-array.some_func(square)
-array2.some_func(square)
-```
+  array = [1,2,3,4,5]
+  array2 = [11,14,20,24,25]
+  array.some_func do | n |
+      n ** 2
+  end
+  array2.some_func do | n |
+      n ** 2
+  end
+  ```
+</details>
+
+#### Procs
+
+<details>
+  <summary>example</summary>
+
+  ```sh
+  class Array
+    def some_func(s)
+      self.each do |n|
+        ...
+        x = s.call(n)    (n = 3 => 3 ** 2 => 9)
+        ...
+      end
+    end
+  end
+
+  array = [1,2,3,4,5]
+  array2 = [11,14,20,24,25]
+  square = Proc.new do | n |
+      n ** 2
+  end
+  array.some_func(square)
+  array2.some_func(square)
+  ```
+</details>
 
 #### Lambda's
+
+<details>
+  <summary>example</summary>
+
 ```
 class Array
   def some_func(s)
@@ -170,8 +252,6 @@ end
 array.some_func(a)
 ```
 
-Uses of Lambda looks similar to Proc.
-The difference is that, while Proc doesn't check parameter count, lambda checks parameter count.
 ```
 def some_func(b)
   b.call(1, 2)
@@ -179,8 +259,14 @@ end
 some_func(Proc.new{ |a, b, c| print a, b, c }) => c == null
 some_func(lambda{ |a, b, c| print a, b, c }) => wrong number of parameters error
 ```
+</details>
 
-For another difference,
+Uses of Lambda looks similar to Proc.
+The difference is that, while Proc doesn't check parameter count, lambda checks parameter count.
+
+<details>
+  <summary>For another difference</summary>
+
 ```
 def first
   Proc.new { return 'a' }.call
@@ -195,6 +281,8 @@ end
 print first #=> 'a'
 print second #=> 'b'
 ```
+</details>
+
 Proc works like code snippet, and once it has seen the return statement, it returns directly.
 But lambda works like a keyword, and it will read the function until the end of the line.
 
@@ -311,25 +399,6 @@ It also has **Little *o*** and **Little *ω***.
 ```sh
 5n = ω(n)
 ```
-
-## Software design pattern
-
-Object-oriented languages are manageable to implementing software design patterns. Patterns help improve developer communication. But like always, uses of patterns should not be overloaded more than practical reason.
-
-#### Singleton Pattern (17.jan.2020)
-
-We use this if we want to limit the creation of the class into one object only.
-ex) User Interface, Game Board
-
-But it should be used in a limited way. This pattern doesn't fit with a multi-thread system while it can generate only one instance. Also, it could be violating the single responsibility rule. As a conclusion, this pattern needs carefully used.
-
-#### Factory Pattern (17.jan.2020)
-
-When we create a object, this pattern secures producing the same instances.
-
-#### Abstract Factory Pattern (17.jan.2020)
-
-The customer application can access to use of factory with no knowledge of conception through an interface of factories.
 
 ## Computer Networking
 

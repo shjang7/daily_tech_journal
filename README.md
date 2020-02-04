@@ -1,5 +1,45 @@
 # Daily Tech Journal
 
+## CPU scheduling (04.feb.2020)
+When we make a cup of coffee, we are not only waiting for boiling water.<br />
+We can clean or wash or setting a cup and table while the water is boiling.<br />
+
+CPU process also be a status until the job is done.<br />
+How the process can manage the limited resources efficiently.<br />
+
+```
+Process scheduling
+│
+├─ Preemptive scheduling
+│  │
+│  ├─ Shortest remaining time
+│  ├─ Round-robin
+│  ├─ Multi-level Queue
+│  └─ Multi-level feedback Queue
+│
+└─ Non-Preemptive scheduling
+   │
+   ├─ Highest response ratio next
+   ├─ Shortest job first
+   ├─ Priority
+   ├─ Deadline
+   └─ FIFO
+```
+
+Preemptive scheduling is suitable for handling tasks what has higher priority, but it cannot assume response time when it has overhead.<br />
+Shortest remaining time scheduling is a priority for shortest time.<br />
+Round-Robin scheduling separate equal amount of time to every task, and handle those with first in first out.<br />
+Multi-level queue scheduling is using several ready queues, and those queues also have a priority.<br />
+Multi-level feedback queue scheduling is similar with the multi-level queue, but each process can move among queues<br />
+
+Non-preemptive scheduling happens when a previous task is finished.<br />
+Highest response ratio next scheduling bridge the gap of inequality of long-hour task and short task and set the priority.<br />
+Shortest job first scheduling has a higher priority for short time process, and it decreases average waiting time.<br />
+Priority scheduling gives priority to process static or dynamic way.<br />
+Deadline scheduling lead work to end within particular term.<br />
+First In First Out scheduling care only the arrived time.<br />
+
+
 <details>
   <summary style="font-size: 2rem; font-weight: 600; color: white;">Software design pattern</summary>
 

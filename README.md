@@ -1,5 +1,14 @@
 # Daily Tech Journal
 
+## Script language overview (05.feb.2020)
+The software at an early age was written in assembly language. After building the compiler, software developers can write code for the more human-understandable higher language, and compiler changes it to assembly one.<br />
+
+But compiler needs compile time for executing a program. If the software changed often, it becomes overloaded.<br />
+
+Scripting language such as Python, Javascript, and Ruby is interpreted when execution time. Generally, compiled language is faster at execution time due to running assembly language. But script language has advantages of faster building time.
+
+
+
 ## CPU scheduling (04.feb.2020)
 When we make a cup of coffee, we are not only waiting for boiling water.<br />
 We can clean or wash or setting a cup and table while the water is boiling.<br />
@@ -40,8 +49,9 @@ Deadline scheduling lead work to end within particular term.<br />
 First In First Out scheduling care only the arrived time.<br />
 
 
+## Software design pattern
 <details>
-  <summary style="font-size: 2rem; font-weight: 600; color: white;">Software design pattern</summary>
+  <summary>Patterns</summary>
 
 ```
 ├─ Creational Pattern

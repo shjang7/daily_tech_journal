@@ -1,5 +1,21 @@
 # Daily Tech Journal
 
+
+## React
+#### State and props (06.feb.2020)
+React component can handle data using props and state.
+
+Props(properties) is the data what parent component gives child component.<br />
+Once the child component get props, it cannot be modified.
+
+State is defined with a default value when a component mounts and can be changed.<br />
+
+Props are a component's configuration, props also includes callback functions.<br />
+State is a data structure.
+
+#### Why Hooks are preferred than using classes (28.jan.2020)
+Hooks provide intuitive API such as useState, useEffect. Using Hooks, we can abstract state-related logic, and it enables us to reuse and share that logic.
+
 ## Script language overview (05.feb.2020)
 The software at an early age was written in assembly language. After building the compiler, software developers can write code for the more human-understandable higher language, and compiler changes it to assembly one.<br />
 
@@ -166,10 +182,6 @@ my_dog.bark()
 It is different from the data saving place of user's information.
 Cookie does not use server's resources, Session uses server's resources.
 The session has better at security, and Cookie has better response speed.
-
-## React
-#### Why Hooks are preferred than using classes (28.jan.2020)
-Hooks provide intuitive API such as useState, useEffect. Using Hooks, we can abstract state-related logic, and it enables us to reuse and share that logic.
 
 ## Data structures
 

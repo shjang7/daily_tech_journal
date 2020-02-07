@@ -1,5 +1,130 @@
 # Daily Tech Journal
 
+## Ruby
+#### The differences between modules and classes (07.feb.2020)
+The big difference is that Class can generate an instance while Module is not.<br />
+While Class can have subclass, but Module cannot have it.<br />
+
+Ruby doesn't provide multiple inheritances. <br />
+But if a Class which didn't access enumerable methods has the 'include Enumerable' keyword, it can use enumerable methods. <br />
+This way, we can keep a simple structure and reuse some methods of modules.
+
+### Closures (24.jan.2020)
+Closures often pass into a function as a parameter, a particular part in the function can call the closure.
+Closures have Blocks, Procs and Lambda's.
+
+#### Blocks
+
+The Block is a snipped code, after passing into a function, it can be executed with the 'yield' in the function.
+If we want to use the same Block to another array2 or array3, to prevent repeating it, we could use Procs or Lambda's.
+
+<details>
+  <summary>example</summary>
+
+  ```sh
+  class Array
+    def some_func
+      self.each do |n|
+        ...
+        x = yield(n)    (n = 3 => 3 ** 2 => 9)
+        ...
+      end
+    end
+  end
+
+  array = [1,2,3,4,5]
+  array2 = [11,14,20,24,25]
+  array.some_func do | n |
+      n ** 2
+  end
+  array2.some_func do | n |
+      n ** 2
+  end
+  ```
+</details>
+
+#### Procs
+
+<details>
+  <summary>example</summary>
+
+  ```sh
+  class Array
+    def some_func(s)
+      self.each do |n|
+        ...
+        x = s.call(n)    (n = 3 => 3 ** 2 => 9)
+        ...
+      end
+    end
+  end
+
+  array = [1,2,3,4,5]
+  array2 = [11,14,20,24,25]
+  square = Proc.new do | n |
+      n ** 2
+  end
+  array.some_func(square)
+  array2.some_func(square)
+  ```
+</details>
+
+#### Lambda's
+
+<details>
+  <summary>example</summary>
+
+```
+class Array
+  def some_func(s)
+    self.each do |n|
+      ...
+      x = s.call(n)    (n = 3 => 3 ** 2 => 9)
+      ...
+    end
+  end
+end
+
+array = [1,2,3,4,5]
+a = lambda do |n|
+  n ** 2
+end
+array.some_func(a)
+```
+
+```
+def some_func(b)
+  b.call(1, 2)
+end
+some_func(Proc.new{ |a, b, c| print a, b, c }) => c == null
+some_func(lambda{ |a, b, c| print a, b, c }) => wrong number of parameters error
+```
+</details>
+
+Uses of Lambda looks similar to Proc.
+The difference is that, while Proc doesn't check parameter count, lambda checks parameter count.
+
+<details>
+  <summary>For another difference</summary>
+
+```
+def first
+  Proc.new { return 'a' }.call
+  return 'b'
+end
+
+def second
+  lambda { return 'a' }.call
+  return 'b'
+end
+
+print first #=> 'a'
+print second #=> 'b'
+```
+</details>
+
+Proc works like code snippet, and once it has seen the return statement, it returns directly.
+But lambda works like a keyword, and it will read the function until the end of the line.
 
 ## React
 #### State and props (06.feb.2020)
@@ -229,124 +354,6 @@ The Array relatively slow at insertion or deletion as shifting is required, but 
 However, access time in memory of Linked list is slower. Because, While Array elements physically assigned consecutively in the hardware memory during compile time, Linked list elements are stored randomly in hardware during the run time.
 
 The linear search can search them both. But Array can be searched by binary search, while Linked list is not.
-
-## Ruby
-### Closures (24.jan.2020)
-Closures often pass into a function as a parameter, a particular part in the function can call the closure.
-Closures have Blocks, Procs and Lambda's.
-
-#### Blocks
-
-The Block is a snipped code, after passing into a function, it can be executed with the 'yield' in the function.
-If we want to use the same Block to another array2 or array3, to prevent repeating it, we could use Procs or Lambda's.
-
-<details>
-  <summary>example</summary>
-
-  ```sh
-  class Array
-    def some_func
-      self.each do |n|
-        ...
-        x = yield(n)    (n = 3 => 3 ** 2 => 9)
-        ...
-      end
-    end
-  end
-
-  array = [1,2,3,4,5]
-  array2 = [11,14,20,24,25]
-  array.some_func do | n |
-      n ** 2
-  end
-  array2.some_func do | n |
-      n ** 2
-  end
-  ```
-</details>
-
-#### Procs
-
-<details>
-  <summary>example</summary>
-
-  ```sh
-  class Array
-    def some_func(s)
-      self.each do |n|
-        ...
-        x = s.call(n)    (n = 3 => 3 ** 2 => 9)
-        ...
-      end
-    end
-  end
-
-  array = [1,2,3,4,5]
-  array2 = [11,14,20,24,25]
-  square = Proc.new do | n |
-      n ** 2
-  end
-  array.some_func(square)
-  array2.some_func(square)
-  ```
-</details>
-
-#### Lambda's
-
-<details>
-  <summary>example</summary>
-
-```
-class Array
-  def some_func(s)
-    self.each do |n|
-      ...
-      x = s.call(n)    (n = 3 => 3 ** 2 => 9)
-      ...
-    end
-  end
-end
-
-array = [1,2,3,4,5]
-a = lambda do |n|
-  n ** 2
-end
-array.some_func(a)
-```
-
-```
-def some_func(b)
-  b.call(1, 2)
-end
-some_func(Proc.new{ |a, b, c| print a, b, c }) => c == null
-some_func(lambda{ |a, b, c| print a, b, c }) => wrong number of parameters error
-```
-</details>
-
-Uses of Lambda looks similar to Proc.
-The difference is that, while Proc doesn't check parameter count, lambda checks parameter count.
-
-<details>
-  <summary>For another difference</summary>
-
-```
-def first
-  Proc.new { return 'a' }.call
-  return 'b'
-end
-
-def second
-  lambda { return 'a' }.call
-  return 'b'
-end
-
-print first #=> 'a'
-print second #=> 'b'
-```
-</details>
-
-Proc works like code snippet, and once it has seen the return statement, it returns directly.
-But lambda works like a keyword, and it will read the function until the end of the line.
 
 ## Ruby on Rails
 ### The advantages of using Ruby on Rails (23.jan.2020)

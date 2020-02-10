@@ -1,5 +1,23 @@
 # Daily Tech Journal
 
+## Discrete mathematics
+### Counting theory (10.feb.2020)
+#### Permutation
+The Permutation is the arrangement of elements with an order.<br />
+The number of cases from n elements picking r is that,
+```
+nPr = n! / (n - r)!
+Because of: nPr = n x (n-1) x ... x (n - r + 1) = n! / (n - r)!
+Consider: 0!(factorial) == 1, n! = n x (n-1) x ... x 1! x 0!
+```
+#### Combination
+The Combination is the arrangement of elements with no order.<br />
+The number of cases from n elements picking r is that,
+```
+nCr = n! / (n - r)! r!
+Because of: nCr = nPr / r! (to disregard order)
+```
+
 ## Ruby
 #### The differences between modules and classes (07.feb.2020)
 The big difference is that Class can generate an instance while Module is not.<br />

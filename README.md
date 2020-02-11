@@ -1,24 +1,29 @@
 # Daily Tech Journal
 
-## Discrete mathematics
-### Counting theory (10.feb.2020)
-#### Permutation
-The Permutation is the arrangement of elements with an order.<br />
-The number of cases from n elements picking r is that,
+## Ruby
+#### Reference external files (11.feb.2020)
+'load' every time access the file, 'require' access the file once at the initial time. <br />
+And 'include' enables to access the module's methods as instances, <br />
+while 'extend' allow us to access the module's methods as class methods.
 ```
-nPr = n! / (n - r)!
-Because of: nPr = n x (n-1) x ... x (n - r + 1) = n! / (n - r)!
-Consider: 0!(factorial) == 1, n! = n x (n-1) x ... x 1! x 0!
-```
-#### Combination
-The Combination is the arrangement of elements with no order.<br />
-The number of cases from n elements picking r is that,
-```
-nCr = n! / (n - r)! r!
-Because of: nCr = nPr / r! (to disregard order)
+Module Talk
+  def say_hi
+    puts 'hi'
+  end
+end
+
+class Ex1
+  include Talk
+end
+
+class Ex2
+  extend Talk
+end
+
+Ex1.new.say_hi #=> hi
+Ex2.say_hi #=> hi
 ```
 
-## Ruby
 #### The differences between modules and classes (07.feb.2020)
 The big difference is that Class can generate an instance while Module is not.<br />
 While Class can have subclass, but Module cannot have it.<br />
@@ -143,6 +148,24 @@ print second #=> 'b'
 
 Proc works like code snippet, and once it has seen the return statement, it returns directly.
 But lambda works like a keyword, and it will read the function until the end of the line.
+
+## Discrete mathematics
+### Counting theory (10.feb.2020)
+#### Permutation
+The Permutation is the arrangement of elements with an order.<br />
+The number of cases from n elements picking r is that,
+```
+nPr = n! / (n - r)!
+Because of: nPr = n x (n-1) x ... x (n - r + 1) = n! / (n - r)!
+Consider: 0!(factorial) == 1, n! = n x (n-1) x ... x 1! x 0!
+```
+#### Combination
+The Combination is the arrangement of elements with no order.<br />
+The number of cases from n elements picking r is that,
+```
+nCr = n! / (n - r)! r!
+Because of: nCr = nPr / r! (to disregard order)
+```
 
 ## React
 #### State and props (06.feb.2020)

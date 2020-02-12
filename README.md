@@ -68,34 +68,27 @@ If we want to use the same Block to another array2 or array3, to prevent repeati
 
 #### Procs
 
-<details>
-  <summary>example</summary>
-
-  ```sh
-  class Array
-    def some_func(s)
-      self.each do |n|
-        ...
-        x = s.call(n)    (n = 3 => 3 ** 2 => 9)
-        ...
-      end
+```
+class Array
+  def some_func(s)
+    self.each do |n|
+      ...
+      x = s.call(n)    (n = 3 => 3 ** 2 => 9)
+      ...
     end
   end
+end
 
-  array = [1,2,3,4,5]
-  array2 = [11,14,20,24,25]
-  square = Proc.new do | n |
-      n ** 2
-  end
-  array.some_func(square)
-  array2.some_func(square)
-  ```
-</details>
+array = [1,2,3,4,5]
+array2 = [11,14,20,24,25]
+square = Proc.new do | n |
+    n ** 2
+end
+array.some_func(square)
+array2.some_func(square)
+```
 
 #### Lambda's
-
-<details>
-  <summary>example</summary>
 
 ```
 class Array
@@ -122,32 +115,46 @@ end
 some_func(Proc.new{ |a, b, c| print a, b, c }) => c == null
 some_func(lambda{ |a, b, c| print a, b, c }) => wrong number of parameters error
 ```
-</details>
 
-Uses of Lambda looks similar to Proc.
-The difference is that, while Proc doesn't check parameter count, lambda checks parameter count.
+#### The differences between *lambda* and *proc* (12.feb.2020)
+*Lambda* and *proc* looks similar but different.<br />
+While *proc* doesn't check parameters count, *lambda* checks it and throws an error in case of no matches.
 
-<details>
-  <summary>For another difference</summary>
-
+And it is another difference.<br />
+*Proc* works like code snippet, and once it has seen the return statement, it returns directly.<br />
+But *lambda* is an anonymous function and works like a keyword, and it will read the function until the end of the line.
 ```
 def first
-  Proc.new { return 'a' }.call
-  return 'b'
+  Proc.new { return 'baam' }.call
+  return 'this is not reached'
 end
 
 def second
-  lambda { return 'a' }.call
-  return 'b'
+  lambda { return 'baam' }.call
+  return 'this is printed'
 end
 
-print first #=> 'a'
-print second #=> 'b'
+print first #=> 'baam'
+print second #=> 'this is printed'
 ```
-</details>
 
-Proc works like code snippet, and once it has seen the return statement, it returns directly.
-But lambda works like a keyword, and it will read the function until the end of the line.
+## Ruby on Rails
+### Callbacks (12.feb.2020)
+Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. (api.rubyonrails.org)
+ex) before_action, after_save in rails controller
+
+### The advantages of using Ruby on Rails (23.jan.2020)
+#### Faster development time
+Ruby on Rails minimizes the website development time by 25-50% as compared to other popular web frameworks.
+
+It has many ready-made plugins which are gems, MVC structure, modular design, object-oriented, and huge open-source communities.
+
+### Additional advantages of using Ruby (23.jan.2020)
+#### Clean and Simple Syntax
+The syntax is modest and compact, which empowers developers to solve complex problems with fewer lines of code. It supports the human-readable code as well.
+
+#### Metaprogramming
+Ruby can be designed to read or transform other programs, and even modify itself while running.
 
 ## Discrete mathematics
 ### Counting theory (10.feb.2020)
@@ -188,8 +195,6 @@ The software at an early age was written in assembly language. After building th
 But compiler needs compile time for executing a program. If the software changed often, it becomes overloaded.<br />
 
 Scripting language such as Python, Javascript, and Ruby is interpreted when execution time. Generally, compiled language is faster at execution time due to running assembly language. But script language has advantages of faster building time.
-
-
 
 ## CPU scheduling (04.feb.2020)
 When we make a cup of coffee, we are not only waiting for boiling water.<br />
@@ -395,20 +400,6 @@ The Array relatively slow at insertion or deletion as shifting is required, but 
 However, access time in memory of Linked list is slower. Because, While Array elements physically assigned consecutively in the hardware memory during compile time, Linked list elements are stored randomly in hardware during the run time.
 
 The linear search can search them both. But Array can be searched by binary search, while Linked list is not.
-
-## Ruby on Rails
-### The advantages of using Ruby on Rails (23.jan.2020)
-#### Faster development time
-Ruby on Rails minimizes the website development time by 25-50% as compared to other popular web frameworks.
-
-It has many ready-made plugins which are gems, MVC structure, modular design, object-oriented, and huge open-source communities.
-
-### Additional advantages of using Ruby (23.jan.2020)
-#### Clean and Simple Syntax
-The syntax is modest and compact, which empowers developers to solve complex problems with fewer lines of code. It supports the human-readable code as well.
-
-#### Metaprogramming
-Ruby can be designed to read or transform other programs, and even modify itself while running.
 
 ## Javascript
 

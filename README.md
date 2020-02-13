@@ -1,5 +1,105 @@
 # Daily Tech Journal
 
+## Ruby on Rails
+### Skinny Controllers, Skinny Models, Fat Services (13.feb.2020)
+Traditionally, it has the term "Skinny Controllers, Fat Models". <br />
+Controllers are hard to test; to keep skinny controllers, we could move as many methods to fat model.<br />
+But if the model structure becomes lengthy code, it is hard to read and can break the single responsibility rule.<br />
+We could move some methods to services to have enhanced readability and to keep high cohesion and low coupling.
+
+### Callbacks (12.feb.2020)
+Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. (api.rubyonrails.org)
+ex) before_action, after_save in rails controller
+
+### The advantages of using Ruby on Rails (23.jan.2020)
+#### Faster development time
+Ruby on Rails minimizes the website development time by 25-50% as compared to other popular web frameworks.
+
+It has many ready-made plugins which are gems, MVC structure, modular design, object-oriented, and huge open-source communities.
+
+### Additional advantages of using Ruby (23.jan.2020)
+#### Clean and Simple Syntax
+The syntax is modest and compact, which empowers developers to solve complex problems with fewer lines of code. It supports the human-readable code as well.
+
+#### Metaprogramming
+Ruby can be designed to read or transform other programs, and even modify itself while running.
+
+## Discrete mathematics
+### Counting theory (10.feb.2020)
+#### Permutation
+The Permutation is the arrangement of elements with an order.<br />
+The number of cases from n elements picking r is that,
+```
+nPr = n! / (n - r)!
+Because of: nPr = n x (n-1) x ... x (n - r + 1) = n! / (n - r)!
+Consider: 0!(factorial) == 1, n! = n x (n-1) x ... x 1! x 0!
+```
+#### Combination
+The Combination is the arrangement of elements with no order.<br />
+The number of cases from n elements picking r is that,
+```
+nCr = n! / (n - r)! r!
+Because of: nCr = nPr / r! (to disregard order)
+```
+
+### WebSockets
+
+#### ActionCable (21.jan.2020)
+Web applications are giving service using the HTTP protocol, half-duplex communication between server and client. For example, chatting app needs to send info from server to client, it uses polling in background service. But, rails 5.0 ActionCable integrates WebSockets to enable bidirectional simultaneous communication between server and client.
+
+### An introduction about Rails 6 framework
+
+This writing is to introduce Rails framework which is a server-side web app framework to a person new to and inexperienced in Rails.
+
+```
+source /
+│
+├─ app /
+│  ├─ controllers
+│  ├─ models
+│  └─ views
+│
+├─ config /
+│  └─ routes
+│
+└─ db /
+   └─ migrate
+```
+
+#### MVC (13.jan.2020)
+
+Rails has a model-view-controller (MVC) design pattern. It presents default structures for a database, a web service, and web pages. I am going to talk about this today.
+
+The model contains data for application and often linked to a database. And it has an order which can be used for business purpose. And it does not know user interface; it means it can be reused.
+
+The view generates the user interface, which presents data to the users. Many views can access the same model for different reasons. Once the view created, the data is displayed to the users.
+
+The controller receives events from the outside world, usually through views. It interacts with the model and displays the appropriate view to the users.
+
+#### Routes (14.jan.2020)
+
+```
+source /
+│
+├─ app /
+│  └─ controllers /
+│     └─ users_controller.rb
+│
+└─ config /
+   └─ routes.rb
+
+[ users_controller.rb ]
+  def index
+    @users = User.all
+  end
+
+[ routes.rb ]
+  get 'users#index', as: :users
+```
+
+The Router in rails navigates the URL or path to proper controllers. For example, the Router 'users URL' called by external links such as user input or command line, then it will connect to 'users_controller' 'index' method.
+
+
 ## Ruby
 #### Reference external files (11.feb.2020)
 'load' every time access the file, 'require' access the file once at the initial time. <br />
@@ -136,42 +236,6 @@ end
 
 print first #=> 'baam'
 print second #=> 'this is printed'
-```
-
-## Ruby on Rails
-### Callbacks (12.feb.2020)
-Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. (api.rubyonrails.org)
-ex) before_action, after_save in rails controller
-
-### The advantages of using Ruby on Rails (23.jan.2020)
-#### Faster development time
-Ruby on Rails minimizes the website development time by 25-50% as compared to other popular web frameworks.
-
-It has many ready-made plugins which are gems, MVC structure, modular design, object-oriented, and huge open-source communities.
-
-### Additional advantages of using Ruby (23.jan.2020)
-#### Clean and Simple Syntax
-The syntax is modest and compact, which empowers developers to solve complex problems with fewer lines of code. It supports the human-readable code as well.
-
-#### Metaprogramming
-Ruby can be designed to read or transform other programs, and even modify itself while running.
-
-## Discrete mathematics
-### Counting theory (10.feb.2020)
-#### Permutation
-The Permutation is the arrangement of elements with an order.<br />
-The number of cases from n elements picking r is that,
-```
-nPr = n! / (n - r)!
-Because of: nPr = n x (n-1) x ... x (n - r + 1) = n! / (n - r)!
-Consider: 0!(factorial) == 1, n! = n x (n-1) x ... x 1! x 0!
-```
-#### Combination
-The Combination is the arrangement of elements with no order.<br />
-The number of cases from n elements picking r is that,
-```
-nCr = n! / (n - r)! r!
-Because of: nCr = nPr / r! (to disregard order)
 ```
 
 ## React
@@ -412,65 +476,6 @@ Async function is written like just general function, but it works like promise 
 An Async function can involve Await; it pauses Async function and waits for promise work; it resumes Async function and returns a result. While the Async function breaks, the calling function runs continuously.
 
 Await keyword only works in an Async function. If we use this out of Async function, it will get a syntax error.
-
-## Rails
-
-### WebSockets
-
-#### ActionCable (21.jan.2020)
-Web applications are giving service using the HTTP protocol, half-duplex communication between server and client. For example, chatting app needs to send info from server to client, it uses polling in background service. But, rails 5.0 ActionCable integrates WebSockets to enable bidirectional simultaneous communication between server and client.
-
-### An introduction about Rails 6 framework
-
-This writing is to introduce Rails framework which is a server-side web app framework to a person new to and inexperienced in Rails.
-
-```
-source /
-│
-├─ app /
-│  ├─ controllers
-│  ├─ models
-│  └─ views
-│
-├─ config /
-│  └─ routes
-│
-└─ db /
-   └─ migrate
-```
-
-#### MVC (13.jan.2020)
-
-Rails has a model-view-controller (MVC) design pattern. It presents default structures for a database, a web service, and web pages. I am going to talk about this today.
-
-The model contains data for application and often linked to a database. And it has an order which can be used for business purpose. And it does not know user interface; it means it can be reused.
-
-The view generates the user interface, which presents data to the users. Many views can access the same model for different reasons. Once the view created, the data is displayed to the users.
-
-The controller receives events from the outside world, usually through views. It interacts with the model and displays the appropriate view to the users.
-
-#### Routes (14.jan.2020)
-
-```
-source /
-│
-├─ app /
-│  └─ controllers /
-│     └─ users_controller.rb
-│
-└─ config /
-   └─ routes.rb
-
-[ users_controller.rb ]
-  def index
-    @users = User.all
-  end
-
-[ routes.rb ]
-  get 'users#index', as: :users
-```
-
-The Router in rails navigates the URL or path to proper controllers. For example, the Router 'users URL' called by external links such as user input or command line, then it will connect to 'users_controller' 'index' method.
 
 
 ## Asymptotic notation

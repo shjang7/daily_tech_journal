@@ -376,8 +376,8 @@ The purposes of the test are checking software working well, but also the satisf
 The test can be done by a unit or an integration test. The unit test helps us to write smaller and full-fill single-responsibility code condition. Another advantages of unit test are catching the problems early, more straightforward integration, and improving the architecture.
 
 ## General Programming
-#### Class method, aka. static method (30.jan.2020)
-
+### Static method, static variable
+#### Class method, a.k.a. static method (30.jan.2020)
 The Class method used to be called as a static method. When the class loads, this static method prepared in memory. The Static method or static variables can be accessed everywhere in application like class.
 
 <details>
@@ -412,6 +412,13 @@ my_dog.bark()
 >> Woof Woof
 ```
 </details>
+
+#### Class variable, a.k.a. Static variable (14.feb.2020)
+The static variable can be called a class variable. <br />
+As a static method, a static variable is defined when the class called.
+
+In Ruby, the variable with @@var_name form is the static variable. <br />
+The static variable keeps the same value for the class while the instance variable formed by @var_name can have a different value for each instance.
 
 #### The differences between Session and Cookie (29.jan.2020)
 It is different from the data saving place of user's information.

@@ -455,13 +455,17 @@ Set is a mathematical terminology to use in computer programming; it indicates w
 And Map is used to store key-value pairs, and this can solve Graph algorithm, frequency algorithm.
 
 #### The differences between Stack and Queue (16.jan.2020)
-
 Queue uses First Input First Output (FIFO). For instance, the people wait for a queue to hop on the bus, the first person in the line will get on the bus.
 
 Stack uses Last Input First Output (LIFO). For example, when I put one piece of paper on the stack of papers, some others will pick first that paper what I put from the pile.
 
-#### The differences between Array and Linked list (14.jan.2020)
+#### The selection of Breadth-First Search And Depth-First Search (14.feb.2020)
+Breadth-First Search traverse the shortest distance from current location.<br />
+While traversing, it pops current spot, checks visited point, pushes the place to visit.<br />
+BFS is useful to perform maze algorithm.<br />
+But if we need to consider some additional information like weight factor, it is better to use Depth-First Search to handle information efficient in memory.
 
+#### The differences between Array and Linked list (14.jan.2020)
 The Array is a consistent set of a fixed number of data items. And the Linked list is an ordered set comprising a variable number of data items.
 
 The indexes directly or randomly access the Array. But the Linked list is sequentially accessed, traverse starting from the first node in the list by the pointer.

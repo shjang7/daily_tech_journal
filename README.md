@@ -8,7 +8,7 @@ But if the model structure becomes lengthy code, it is hard to read and can brea
 We could move some methods to services to have enhanced readability and to keep high cohesion and low coupling.
 
 ### Callbacks (12.feb.2020)
-Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. (api.rubyonrails.org)
+Callbacks are hooks into the life cycle of an Active Record object that allow you to trigger logic before or after an alteration of the object state. (api.rubyonrails.org)<br />
 ex) before_action, after_save in rails controller
 
 ### The advantages of using Ruby on Rails (23.jan.2020)
@@ -19,7 +19,7 @@ It has many ready-made plugins which are gems, MVC structure, modular design, ob
 
 ### Additional advantages of using Ruby (23.jan.2020)
 #### Clean and Simple Syntax
-The syntax is modest and compact, which empowers developers to solve complex problems with fewer lines of code. It supports the human-readable code as well.
+The syntax is modest and compact, which empowers developers to solve complex problems with fewer lines of code.<br /> It supports the human-readable code as well.
 
 #### Metaprogramming
 Ruby can be designed to read or transform other programs, and even modify itself while running.
@@ -45,7 +45,7 @@ Because of: nCr = nPr / r! (to disregard order)
 ### WebSockets
 
 #### ActionCable (21.jan.2020)
-Web applications are giving service using the HTTP protocol, half-duplex communication between server and client. For example, chatting app needs to send info from server to client, it uses polling in background service. But, rails 5.0 ActionCable integrates WebSockets to enable bidirectional simultaneous communication between server and client.
+Web applications are giving service using the HTTP protocol, half-duplex communication between server and client.<br /> For example, chatting app needs to send info from server to client, it uses polling in background service.<br /> But, rails 5.0 ActionCable integrates WebSockets to enable bidirectional simultaneous communication between server and client.
 
 ### An introduction about Rails 6 framework
 
@@ -68,13 +68,13 @@ source /
 
 #### MVC (13.jan.2020)
 
-Rails has a model-view-controller (MVC) design pattern. It presents default structures for a database, a web service, and web pages. I am going to talk about this today.
+Rails has a model-view-controller (MVC) design pattern.<br />It presents default structures for a database, a web service, and web pages.<br />I am going to talk about this today.
 
-The model contains data for application and often linked to a database. And it has an order which can be used for business purpose. And it does not know user interface; it means it can be reused.
+The model contains data for application and often linked to a database.<br />And it has an order which can be used for business purpose.<br />And it does not know user interface; it means it can be reused.
 
-The view generates the user interface, which presents data to the users. Many views can access the same model for different reasons. Once the view created, the data is displayed to the users.
+The view generates the user interface, which presents data to the users.<br />Many views can access the same model for different reasons.<br />Once the view created, the data is displayed to the users.
 
-The controller receives events from the outside world, usually through views. It interacts with the model and displays the appropriate view to the users.
+The controller receives events from the outside world, usually through views.<br />It interacts with the model and displays the appropriate view to the users.
 
 #### Routes (14.jan.2020)
 
@@ -97,7 +97,7 @@ source /
   get 'users#index', as: :users
 ```
 
-The Router in rails navigates the URL or path to proper controllers. For example, the Router 'users URL' called by external links such as user input or command line, then it will connect to 'users_controller' 'index' method.
+The Router in rails navigates the URL or path to proper controllers. <br />For example, the Router 'users URL' called by external links such as user input or command line, then it will connect to 'users_controller' 'index' method.
 
 
 ## Ruby
@@ -133,12 +133,12 @@ But if a Class which didn't access enumerable methods has the 'include Enumerabl
 This way, we can keep a simple structure and reuse some methods of modules.
 
 ### Closures (24.jan.2020)
-Closures often pass into a function as a parameter, a particular part in the function can call the closure.
+Closures often pass into a function as a parameter, a particular part in the function can call the closure.<br />
 Closures have Blocks, Procs and Lambda's.
 
 #### Blocks
 
-The Block is a snipped code, after passing into a function, it can be executed with the 'yield' in the function.
+The Block is a snipped code, after passing into a function, it can be executed with the 'yield' in the function.<br />
 If we want to use the same Block to another array2 or array3, to prevent repeating it, we could use Procs or Lambda's.
 
 <details>
@@ -251,14 +251,14 @@ Props are a component's configuration, props also includes callback functions.<b
 State is a data structure.
 
 #### Why Hooks are preferred than using classes (28.jan.2020)
-Hooks provide intuitive API such as useState, useEffect. Using Hooks, we can abstract state-related logic, and it enables us to reuse and share that logic.
+Hooks provide intuitive API such as useState, useEffect. <br />Using Hooks, we can abstract state-related logic, and it enables us to reuse and share that logic.
 
 ## Script language overview (05.feb.2020)
-The software at an early age was written in assembly language. After building the compiler, software developers can write code for the more human-understandable higher language, and compiler changes it to assembly one.<br />
+The software at an early age was written in assembly language. <br />After building the compiler, software developers can write code for the more human-understandable higher language, and compiler changes it to assembly one.<br />
 
-But compiler needs compile time for executing a program. If the software changed often, it becomes overloaded.<br />
+But compiler needs compile time for executing a program. <br />If the software changed often, it becomes overloaded.<br />
 
-Scripting language such as Python, Javascript, and Ruby is interpreted when execution time. Generally, compiled language is faster at execution time due to running assembly language. But script language has advantages of faster building time.
+Scripting language such as Python, Javascript, and Ruby is interpreted when execution time.<br />Generally, compiled language is faster at execution time due to running assembly language.<br />But script language has advantages of faster building time.
 
 ## CPU scheduling (04.feb.2020)
 When we make a cup of coffee, we are not only waiting for boiling water.<br />
@@ -340,25 +340,23 @@ First In First Out scheduling care only the arrived time.<br />
 ```
 </details>
 
-Object-oriented languages are manageable to implementing software design patterns. Patterns help improve developer communication. But like always, uses of patterns should not be overloaded more than practical reason.
+Object-oriented languages are manageable to implementing software design patterns. <br />Patterns help improve developer communication. <br />But like always, uses of patterns should not be overloaded more than practical reason.
 
 ### Behavioral Pattern (03.feb.2020)
-For example, there is a lion and a cheetah.
-The common Behavioral between them is hunting animals, living in the yard.
+For example, there is a lion and a cheetah.<br />
+The common Behavioral between them is hunting animals, living in the yard.<br />
 If it has a parent class like Wild animals, then the Lion and Cheetah class can inherit it and implemented detail.
 
 ex) Template Method
 
 ### Creational Pattern
 #### Singleton Pattern (17.jan.2020)
-
-We use this if we want to limit the creation of the class into one object only.
+We use this if we want to limit the creation of the class into one object only.<br />
 ex) User Interface, Game Board
 
-But it should be used in a limited way. This pattern doesn't fit with a multi-thread system while it can generate only one instance. Also, it could be violating the single responsibility rule. As a conclusion, this pattern needs carefully used.
+But it should be used in a limited way. <br />This pattern doesn't fit with a multi-thread system while it can generate only one instance. <br />Also, it could be violating the single responsibility rule. <br />As a conclusion, this pattern needs carefully used.
 
 #### Factory Method (17.jan.2020)
-
 When we create a object, this pattern secures producing the same instances.
 
 #### Abstract Factory (17.jan.2020)
@@ -373,12 +371,12 @@ The software test is very important in the reasons above, but for the faster dev
 
 The purposes of the test are checking software working well, but also the satisfaction of the software specifications.
 
-The test can be done by a unit or an integration test. The unit test helps us to write smaller and full-fill single-responsibility code condition. Another advantages of unit test are catching the problems early, more straightforward integration, and improving the architecture.
+The test can be done by a unit or an integration test. <br />The unit test helps us to write smaller and full-fill single-responsibility code condition. <br />Another advantages of unit test are catching the problems early, more straightforward integration, and improving the architecture.
 
 ## General Programming
 ### Static method, static variable
 #### Class method, a.k.a. static method (30.jan.2020)
-The Class method used to be called as a static method. When the class loads, this static method prepared in memory. The Static method or static variables can be accessed everywhere in application like class.
+The Class method used to be called as a static method.<br /> When the class loads, this static method prepared in memory.<br /> The Static method or static variables can be accessed everywhere in application like class.
 
 <details>
   <summary style="">Example</summary>
@@ -421,8 +419,8 @@ In Ruby, the variable with @@var_name form is the static variable. <br />
 The static variable keeps the same value for the class while the instance variable formed by @var_name can have a different value for each instance.
 
 #### The differences between Session and Cookie (29.jan.2020)
-It is different from the data saving place of user's information.
-Cookie does not use server's resources, Session uses server's resources.
+It is different from the data saving place of user's information.<br />
+Cookie does not use server's resources, Session uses server's resources.<br />
 The session has better at security, and Cookie has better response speed.
 
 ## Data structures
@@ -448,61 +446,61 @@ Data structures (non-primitive)
 ```
 
 #### The differences between Set and Map (27.jan.2020)
-Set or Map can be stored in computer memory with an order or as a Hashmap Table.
-The case of storing with order is useful to have sorted order, but we could have constant time efficiency using Hashmap Table. So the purpose of using it should be considered, and it needs trade-off for the circumstance.
+Set or Map can be stored in computer memory with an order or as a Hashmap Table.<br />
+The case of storing with order is useful to have sorted order, but we could have constant time efficiency using Hashmap Table.<br />So the purpose of using it should be considered, and it needs trade-off for the circumstance.
 
-Set is a mathematical terminology to use in computer programming; it indicates whether an element contained in a Set or not.
+Set is a mathematical terminology to use in computer programming; it indicates whether an element contained in a Set or not.<br />
 And Map is used to store key-value pairs, and this can solve Graph algorithm, frequency algorithm.
 
 #### The differences between Stack and Queue (16.jan.2020)
-Queue uses First Input First Output (FIFO). For instance, the people wait for a queue to hop on the bus, the first person in the line will get on the bus.
+Queue uses First Input First Output (FIFO). <br />For instance, the people wait for a queue to hop on the bus, the first person in the line will get on the bus.
 
-Stack uses Last Input First Output (LIFO). For example, when I put one piece of paper on the stack of papers, some others will pick first that paper what I put from the pile.
+Stack uses Last Input First Output (LIFO). <br />For example, when I put one piece of paper on the stack of papers, some others will pick first that paper what I put from the pile.
 
-#### The selection of Breadth-First Search And Depth-First Search (14.feb.2020)
+#### The selection between Breadth-First Search and Depth-First Search (14.feb.2020)
 Breadth-First Search traverse the shortest distance from current location.<br />
 While traversing, it pops current spot, checks visited point, pushes the place to visit.<br />
 BFS is useful to perform maze algorithm.<br />
 But if we need to consider some additional information like weight factor, it is better to use Depth-First Search to handle information efficient in memory.
 
 #### The differences between Array and Linked list (14.jan.2020)
-The Array is a consistent set of a fixed number of data items. And the Linked list is an ordered set comprising a variable number of data items.
+The Array is a consistent set of a fixed number of data items.<br />And the Linked list is an ordered set comprising a variable number of data items.
 
-The indexes directly or randomly access the Array. But the Linked list is sequentially accessed, traverse starting from the first node in the list by the pointer.
+The indexes directly or randomly access the Array.<br />But the Linked list is sequentially accessed, traverse starting from the first node in the list by the pointer.
 
 The Array relatively slow at insertion or deletion as shifting is required, but the Linked list is effective, fast and efficient for that.
 
-However, access time in memory of Linked list is slower. Because, While Array elements physically assigned consecutively in the hardware memory during compile time, Linked list elements are stored randomly in hardware during the run time.
+However, access time in memory of Linked list is slower.<br /> Because, While Array elements physically assigned consecutively in the hardware memory during compile time, Linked list elements are stored randomly in hardware during the run time.
 
-The linear search can search them both. But Array can be searched by binary search, while Linked list is not.
+The linear search can search them both.<br /> But Array can be searched by binary search, while Linked list is not.
 
 ## Javascript
 
 ### Asynchronous
-The response time after sending a request to the server could be slower than code execution time. So we need to use the asynchronous function.
+The response time after sending a request to the server could be slower than code execution time. <br />So we need to use the asynchronous function.
 
 #### Async-await (22.jan.2020)
 Async function is written like just general function, but it works like promise function.
 
-An Async function can involve Await; it pauses Async function and waits for promise work; it resumes Async function and returns a result. While the Async function breaks, the calling function runs continuously.
+An Async function can involve Await; it pauses Async function and waits for promise work; it resumes Async function and returns a result.<br />While the Async function breaks, the calling function runs continuously.
 
-Await keyword only works in an Async function. If we use this out of Async function, it will get a syntax error.
+Await keyword only works in an Async function.<br />If we use this out of Async function, it will get a syntax error.
 
 
 ## Asymptotic notation
 
 #### *Θ*, *O*, *Ω*, *o*, *ω* notations (20.jan.2020)
-For the small size algorithm, the task ends very fast regardless of the effectiveness.
-But when the input size is big enough, the efficiency becomes an issue.
+For the small size algorithm, the task ends very fast regardless of the effectiveness.<br />
+But when the input size is big enough, the efficiency becomes an issue.<br />
 So, to calculate the execution time of an algorithm, always we analyze the time for big sized input case, aka Asymptotic notation.
 
-First, Look the three notations.
-**Big *Θ*** (theta) notation means an **asymptotic increasing rate** of an algorithm. *Θ*(*f*(*n*)) is a group of matching asymptotic increasing rate with *f*(*n*). For example,
+First, Look the three notations.<br />
+**Big *Θ*** (theta) notation means an **asymptotic increasing rate** of an algorithm.<br /> *Θ*(*f*(*n*)) is a group of matching asymptotic increasing rate with *f*(*n*). <br />For example,
 ```sh
 5n² + 4n + 6 = Θ(n²)
 ```
 
-**Big *O*** notation means asymptotic **upper bound** of increasing rate, and it calculates **worst case**.
+**Big *O*** notation means asymptotic **upper bound** of increasing rate, and it calculates **worst case**.<br />
 And **Big *Ω*** (omega) notation means an asymptotic **lower bound** of increasing rate, and it calculates the **best case**.
 
 And look deep into the strict definition.
@@ -521,7 +519,7 @@ It also has **Little *o*** and **Little *ω***.
 
 ### Network Layers
 
-Two computers communicate help of network connection. But, if this two has different OS or architecture or even different capacity of data acceptance speed,
+Two computers communicate help of network connection. <br />But, if this two has different OS or architecture or even different capacity of data acceptance speed,<br />
 how they can communicate with each other in real-time.
 
 #### Five-layer internet protocol stack (15.jan.2020)
@@ -538,17 +536,17 @@ Protocol stack
 
 Each layers is a package of protocols.
 
-The Application layer includes some protocols, such as the HTTP, SMTP, FTP protocol. It also does transmitting human-readable url domain to the actual address.
+The Application layer includes some protocols, such as the HTTP, SMTP, FTP protocol. <br />It also does transmitting human-readable url domain to the actual address.
 Application layer data transported by TCP, UDP protocols in the Transport layer.
 
-Network layer moves Datagram packets from one host to another.
+Network layer moves Datagram packets from one host to another.<br />
 The Network layer combines Transport layer segment and a destination address, like a postal service a letter with a destination address.
 
 The Network layer passes the Datagram down to the Link layer, and the Link layer passes the Datagram up to the Network layer.
 
 Finally, the job of the Physical layer is to move the individual bits within the frame from one node to the next.
 
-But we should mention that it has not only protocol stack around. The network can be organized around seven layers which is OSI (Open System Interconnection) model.
+But we should mention that it has not only protocol stack around. <br />The network can be organized around seven layers which is OSI (Open System Interconnection) model.
 
 #### 7 layers of OSI model (15.jan.2020)
 
@@ -566,10 +564,10 @@ OSI model
 
 OSI(Open System Interconnection) model has 7 layers.
 
-Application layer includes HTTP, FTP, SMTP, ... protocols. That provides services of network applications such as Chrome, Firefox, Outlook, Skype, etc.
+Application layer includes HTTP, FTP, SMTP, ... protocols. <br />That provides services of network applications such as Chrome, Firefox, Outlook, Skype, etc.
 
-Presentation layer receives data from the Application layer. This data is the form of characters and numbers and translated to
-machine understandable binary format. And Presentation layer compresses this data for faster sending, also does encryption or decryption.
+Presentation layer receives data from the Application layer. <br />This data is the form of characters and numbers and translated to
+machine understandable binary format. <br />And Presentation layer compresses this data for faster sending, also does encryption or decryption.
 
 Session layer helps session management, authentication, authorization.
 
@@ -577,9 +575,9 @@ The Transport layer is envolved segmentation, flow control for speed differences
 
 The Transport layer provides various forms of process-to-process communication by relying on the network layer's host-to-host communication service.
 
-The function of the Network layer is logical addressing of IPv4 and IPv6, path determination and Routing. When the data arrives, the Routing does finding where to move data with the separation of host and computer address.
+The function of the Network layer is logical addressing of IPv4 and IPv6, path determination and Routing. <br />When the data arrives, the Routing does finding where to move data with the separation of host and computer address.
 
-Their has two types of addressing, logical addressing is from the Network layer, and physical addressing is from Data link layer.
+Their has two types of addressing, logical addressing is from the Network layer, and physical addressing is from Data link layer.<br />
 The Data link layer is embedded as software in the network interface card of the computer.
 
 Physical layer considered by the data communication through optic, electrical transmitting information.
@@ -590,14 +588,14 @@ Physical layer considered by the data communication through optic, electrical tr
 
 We supposed to try a network connection such as opening google.com, what is going to have happened?
 
-1. A client sends to server SYN packet which contains sequence numbers that support the server can connect client; this step is like "Hey, do you want to talk?"
-2. The server sends back to the client SYN/ACK packet with the help of sequence numbers; this step is like "Yeah, I received your message, do you want to talk?"
+1. A client sends to server SYN packet which contains sequence numbers that support the server can connect client; this step is like "Hey, do you want to talk?"<br />
+2. The server sends back to the client SYN/ACK packet with the help of sequence numbers; this step is like "Yeah, I received your message, do you want to talk?"<br />
 3. Then the client sends ACK packet to the server, like "Yes, let's talk."
 
-=> After this three-way Handshake occurs, the connection is established between the server and the client. Now the packets between them can be transmitted. The protocols loading over TCP is HTTP, FTP, SMTP and SSH.
+=> After this three-way Handshake occurs, the connection is established between the server and the client. <br />Now the packets between them can be transmitted. <br />The protocols loading over TCP is HTTP, FTP, SMTP and SSH.
 
 As it has an opening connection, it also has a closing connection.
 
-1. The client sends the server SYN/ACK packet; "There is no need connection, wants to leave."
-2. The server sends back to the client ACK packet, "Yes, I know that you want to leave, then bye."
+1. The client sends the server SYN/ACK packet; "There is no need connection, wants to leave."<br />
+2. The server sends back to the client ACK packet, "Yes, I know that you want to leave, then bye."<br />
 3. The client sends back to the server ACK packet, "Yes, bye!"

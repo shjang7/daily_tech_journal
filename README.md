@@ -1,5 +1,27 @@
 # Daily Tech Journal
 
+## React
+#### Component (17.feb.2020)
+A component is a minimal, self-contained, small entity that describes a part of the UI.<br /> One application UI can be shattered into smaller components.
+
+A component can manage subcomponents.
+
+Components are also reusable. <br />We can use the same component in multiple places.
+
+#### State and props (06.feb.2020)
+React component can handle data using props and state.
+
+Props(properties) is the data what parent component gives child component.<br />
+Once the child component get props, it cannot be modified.
+
+State is defined with a default value when a component mounts and can be changed.<br />
+
+Props are a component's configuration, props also includes callback functions.<br />
+State is a data structure.
+
+#### Why Hooks are preferred than using classes (28.jan.2020)
+Hooks provide intuitive API such as useState, useEffect. <br />Using Hooks, we can abstract state-related logic, and it enables us to reuse and share that logic.
+
 ## Ruby on Rails
 ### Skinny Controllers, Skinny Models, Fat Services (13.feb.2020)
 Traditionally, it has the term "Skinny Controllers, Fat Models". <br />
@@ -237,21 +259,6 @@ end
 print first #=> 'baam'
 print second #=> 'this is printed'
 ```
-
-## React
-#### State and props (06.feb.2020)
-React component can handle data using props and state.
-
-Props(properties) is the data what parent component gives child component.<br />
-Once the child component get props, it cannot be modified.
-
-State is defined with a default value when a component mounts and can be changed.<br />
-
-Props are a component's configuration, props also includes callback functions.<br />
-State is a data structure.
-
-#### Why Hooks are preferred than using classes (28.jan.2020)
-Hooks provide intuitive API such as useState, useEffect. <br />Using Hooks, we can abstract state-related logic, and it enables us to reuse and share that logic.
 
 ## Script language overview (05.feb.2020)
 The software at an early age was written in assembly language. <br />After building the compiler, software developers can write code for the more human-understandable higher language, and compiler changes it to assembly one.<br />

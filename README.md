@@ -8,7 +8,7 @@ A component can manage subcomponents.
 
 Components are also reusable. <br />We can use the same component in multiple places.
 
-#### State and props (06.feb.2020)
+#### State and Props (06.feb.2020)
 React component can handle data using props and state.
 
 Props(properties) is the data what parent component gives child component.<br />
@@ -18,6 +18,13 @@ State is defined with a default value when a component mounts and can be changed
 
 Props are a component's configuration, props also includes callback functions.<br />
 State is a data structure.
+
+#### Stateful component and Stateless component (18.feb.2020)
+For the stateless component, the properties in this component should be final and cannot be changed once it is initialized.<br />
+ex) layout, bg color
+
+For the stateful component, the state of the component can change over time.<br />
+ex) counting of clicks
 
 #### Why Hooks are preferred than using classes (28.jan.2020)
 Hooks provide intuitive API such as useState, useEffect. <br />Using Hooks, we can abstract state-related logic, and it enables us to reuse and share that logic.

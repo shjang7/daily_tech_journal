@@ -21,10 +21,31 @@ State is a data structure.
 
 #### Stateful component and Stateless component (18.feb.2020)
 For the stateless component, the properties in this component should be final and cannot be changed once it is initialized.<br />
+When we use it, we need to send parameters the dependencies of component, and we can find code smell easily, which is very dependent code. <br />
 ex) layout, bg color
 
 For the stateful component, the state of the component can change over time.<br />
 ex) counting of clicks
+
+#### Presentational or Container component (19.feb.2020)
+It is a useful way to separate behavioural logic from presentational logic regarding the pattern.
+
+Presentational components are related to how you view them. <br />
+The UI-related code is all in the presentation component renders using props from related containers. <br />
+
+The presentational components can be reused. <br />
+If an event error occurs when the button is clicked, it uses the container component's callback for handling it. <br />
+The presentational components can use UI states but not data states. <br />
+If it doesn't use the states, it is recommended to use functional components. <br />
+The presentational components do not interact with the Redux store and do not call APIs.
+
+The container components handle the behavioural logic. <br />
+A container component sends props to the presentation components to tell it how to render. <br />
+It does not contain any DOM markup or styles. <br />
+We can use a container component to call the API or send action to the store. <br />
+
+In general, it's useful to link presentation components as props in small projects. <br />
+As a project grows, we need to use a different approach.
 
 #### Why Hooks are preferred than using classes (28.jan.2020)
 Hooks provide intuitive API such as useState, useEffect. <br />Using Hooks, we can abstract state-related logic, and it enables us to reuse and share that logic.

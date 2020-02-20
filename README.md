@@ -1,5 +1,60 @@
 # Daily Tech Journal
 
+## General Programming
+#### The difference between URI(Uniform Resource Identifier) and URL(Uniform Resource Locator) (20.feb.2020)
+URI contains URL.<br />
+URI is attached internet protocol which can be http or https<br />
+URL indicates the location of resource.<br />
+
+### Static method, static variable
+#### Class method, a.k.a. static method (30.jan.2020)
+The Class method used to be called as a static method.<br /> When the class loads, this static method prepared in memory.<br /> The Static method or static variables can be accessed everywhere in application like class.
+
+<details>
+  <summary style="">Example</summary>
+
+- c++
+```
+Class Robot {
+    static void hi(name) {
+      cout << name << ' hi!!';
+    }
+}
+```
+- ruby
+```
+Class Robot
+    def self.hi(name)
+      print `${name} hi!!`
+    end
+end
+```
+- class method
+```
+human_name = 'suhy'
+Robot.hi(human_name)
+>> suhy hi!!
+```
+- instance method
+```
+my_dog = Dog('warr')
+my_dog.bark()
+>> Woof Woof
+```
+</details>
+
+#### Class variable, a.k.a. Static variable (14.feb.2020)
+The static variable can be called a class variable. <br />
+As a static method, a static variable is defined when the class called.
+
+In Ruby, the variable with @@var_name form is the static variable. <br />
+The static variable keeps the same value for the class while the instance variable formed by @var_name can have a different value for each instance.
+
+#### The differences between Session and Cookie (29.jan.2020)
+It is different from the data saving place of user's information.<br />
+Cookie does not use server's resources, Session uses server's resources.<br />
+The session has better at security, and Cookie has better response speed.
+
 ## React
 #### Component (17.feb.2020)
 A component is a minimal, self-contained, small entity that describes a part of the UI.<br /> One application UI can be shattered into smaller components.
@@ -407,56 +462,6 @@ The software test is very important in the reasons above, but for the faster dev
 The purposes of the test are checking software working well, but also the satisfaction of the software specifications.
 
 The test can be done by a unit or an integration test. <br />The unit test helps us to write smaller and full-fill single-responsibility code condition. <br />Another advantages of unit test are catching the problems early, more straightforward integration, and improving the architecture.
-
-## General Programming
-### Static method, static variable
-#### Class method, a.k.a. static method (30.jan.2020)
-The Class method used to be called as a static method.<br /> When the class loads, this static method prepared in memory.<br /> The Static method or static variables can be accessed everywhere in application like class.
-
-<details>
-  <summary style="">Example</summary>
-
-- c++
-```
-Class Robot {
-    static void hi(name) {
-      cout << name << ' hi!!';
-    }
-}
-```
-- ruby
-```
-Class Robot
-    def self.hi(name)
-      print `${name} hi!!`
-    end
-end
-```
-- class method
-```
-human_name = 'suhy'
-Robot.hi(human_name)
->> suhy hi!!
-```
-- instance method
-```
-my_dog = Dog('warr')
-my_dog.bark()
->> Woof Woof
-```
-</details>
-
-#### Class variable, a.k.a. Static variable (14.feb.2020)
-The static variable can be called a class variable. <br />
-As a static method, a static variable is defined when the class called.
-
-In Ruby, the variable with @@var_name form is the static variable. <br />
-The static variable keeps the same value for the class while the instance variable formed by @var_name can have a different value for each instance.
-
-#### The differences between Session and Cookie (29.jan.2020)
-It is different from the data saving place of user's information.<br />
-Cookie does not use server's resources, Session uses server's resources.<br />
-The session has better at security, and Cookie has better response speed.
 
 ## Data structures
 

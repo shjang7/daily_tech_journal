@@ -1,6 +1,12 @@
 # Daily Tech Journal
 
 ## General Programming
+### Kernel commands
+#### The 'exit', 'abort' and 'assert' (21.feb.2020)
+'exit' immediately terminates the script, parameter 0 for normal, and 1 for abnormal ends. <br />
+'abort' receives a message to be printed on STDERR. <br />
+'assert' ends the program when the given value is false.
+
 #### The difference between URI(Uniform Resource Identifier) and URL(Uniform Resource Locator) (20.feb.2020)
 URI contains URL.<br />
 URI is attached internet protocol which can be http or https<br />

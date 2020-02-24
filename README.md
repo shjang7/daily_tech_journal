@@ -1,5 +1,20 @@
 # Daily Tech Journal
 
+## Javascript
+### Methods
+#### Array methods (24.feb.2020)
+push, pop, unshift, shift, splice, slice, ...
+
+### Asynchronous
+The response time after sending a request to the server could be slower than code execution time. <br />So we need to use the asynchronous function.
+
+#### Async-await (22.jan.2020)
+Async function is written like just general function, but it works like promise function.
+
+An Async function can involve Await; it pauses Async function and waits for promise work; it resumes Async function and returns a result.<br />While the Async function breaks, the calling function runs continuously.
+
+Await keyword only works in an Async function.<br />If we use this out of Async function, it will get a syntax error.
+
 ## General Programming
 ### Kernel commands
 #### The 'exit', 'abort' and 'assert' (21.feb.2020)
@@ -519,19 +534,6 @@ The Array relatively slow at insertion or deletion as shifting is required, but 
 However, access time in memory of Linked list is slower.<br /> Because, While Array elements physically assigned consecutively in the hardware memory during compile time, Linked list elements are stored randomly in hardware during the run time.
 
 The linear search can search them both.<br /> But Array can be searched by binary search, while Linked list is not.
-
-## Javascript
-
-### Asynchronous
-The response time after sending a request to the server could be slower than code execution time. <br />So we need to use the asynchronous function.
-
-#### Async-await (22.jan.2020)
-Async function is written like just general function, but it works like promise function.
-
-An Async function can involve Await; it pauses Async function and waits for promise work; it resumes Async function and returns a result.<br />While the Async function breaks, the calling function runs continuously.
-
-Await keyword only works in an Async function.<br />If we use this out of Async function, it will get a syntax error.
-
 
 ## Asymptotic notation
 

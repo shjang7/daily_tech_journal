@@ -227,6 +227,16 @@ The Router in rails navigates the URL or path to proper controllers. <br />For e
 
 
 ## Ruby
+#### The difference between ==, ===, eql?, equal? (25.feb.2020)
+The four check the equal of two elements.
+
+== is used for general purpose, and it can be overriden descendant classes.<br />
+And, === is used for case-when sentence.
+
+Similar to the above one, it also has Eql? and Equal? comparison.<br />
+Eql? is used for checking the two hash is equal.<br />
+Equal? checks the identification of two is the same or not. If the two have the same value and different identification, the result will be false.<br />
+
 #### Reference external files (11.feb.2020)
 'load' every time access the file, 'require' access the file once at the initial time. <br />
 And 'include' enables to access the module's methods as instances, <br />

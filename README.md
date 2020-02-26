@@ -1,5 +1,4 @@
 # Daily Tech Journal
-
 ## Javascript
 ### Methods
 #### Array methods (24.feb.2020)
@@ -16,6 +15,12 @@ An Async function can involve Await; it pauses Async function and waits for prom
 Await keyword only works in an Async function.<br />If we use this out of Async function, it will get a syntax error.
 
 ## General Programming
+### Web programming
+#### What is Ajax (26.feb.2020)
+Ajax is a web development technique that uses the following.<br /> combinations to create asynchronous web applications.<br />
+One is for presentation information such as HTML(XHTML) and CSS.<br />
+And one is for dynamic display and interaction with display information such as DOM, JavaScript.
+
 ### Kernel commands
 #### The 'exit', 'abort' and 'assert' (21.feb.2020)
 'exit' immediately terminates the script, parameter 0 for normal, and 1 for abnormal ends. <br />

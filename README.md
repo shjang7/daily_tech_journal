@@ -1,20 +1,22 @@
 # Daily Tech Journal
-## Javascript
-### Methods
-#### Array methods (24.feb.2020)
-push, pop, unshift, shift, splice, slice, ...
-
-### Asynchronous
-The response time after sending a request to the server could be slower than code execution time. <br />So we need to use the asynchronous function.
-
-#### Async-await (22.jan.2020)
-Async function is written like just general function, but it works like promise function.
-
-An Async function can involve Await; it pauses Async function and waits for promise work; it resumes Async function and returns a result.<br />While the Async function breaks, the calling function runs continuously.
-
-Await keyword only works in an Async function.<br />If we use this out of Async function, it will get a syntax error.
-
 ## General Programming
+### Code design
+#### High cohesion and low coupling (27.feb.2020)
+It is a very classic principle defined by Larry Constantine and Edward Eudon in the late 1970s.
+
+Cohesiveness means the degree to which a class is highly responsible for one function (responsibility).<br />
+The higher the cohesion, the simpler and clearer the structure of classes and programs.
+
+It is the case of cohesion from best(high) to worst.<br />
+That is data-type cohesion(using a module like an abstract data-type), functional cohesion(a group of similar purposed functions), sequential cohesion(connected with sequence), logical cohesion(ex: group of input, output), coincidental cohesion.
+
+Coupling means the degree of interdependence where the different responsibilities between classes are intertwined.<br />
+The higher the degree of coupling, the more difficult at readability and maintain.<br />
+In general, low-level couplings are easier to understand, more comfortable to write documents and test, and easier to maintain.
+
+It is the case of coupling from best(low) to worst.<br />
+That is message coupling(using the common interface), data coupling, stamp coupling, control coupling, global coupling, content coupling.
+
 ### Web programming
 #### What is Ajax (26.feb.2020)
 Ajax is a web development technique that uses the following.<br /> combinations to create asynchronous web applications.<br />
@@ -80,6 +82,21 @@ The static variable keeps the same value for the class while the instance variab
 It is different from the data saving place of user's information.<br />
 Cookie does not use server's resources, Session uses server's resources.<br />
 The session has better at security, and Cookie has better response speed.
+
+## Javascript
+### Methods
+#### Array methods (24.feb.2020)
+push, pop, unshift, shift, splice, slice, ...
+
+### Asynchronous
+The response time after sending a request to the server could be slower than code execution time. <br />So we need to use the asynchronous function.
+
+#### Async-await (22.jan.2020)
+Async function is written like just general function, but it works like promise function.
+
+An Async function can involve Await; it pauses Async function and waits for promise work; it resumes Async function and returns a result.<br />While the Async function breaks, the calling function runs continuously.
+
+Await keyword only works in an Async function.<br />If we use this out of Async function, it will get a syntax error.
 
 ## React
 #### Component (17.feb.2020)

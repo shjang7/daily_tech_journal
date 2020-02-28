@@ -17,6 +17,26 @@ In general, low-level couplings are easier to understand, more comfortable to wr
 It is the case of coupling from best(low) to worst.<br />
 That is message coupling(using the common interface), data coupling, stamp coupling, control coupling, global coupling, content coupling.
 
+## Backend
+### Pros and cons of database migration (28.feb.2020)
+#### Benefits
+Companies can save money like infrastructure, expertise required to support it.
+
+As well as saving cost, database migration can move from old or legacy systems to systems designed for the latest data needs. <br /> In the big data era, new storage technologies are needed.
+
+And, to move all the data into one place that is accessible to every department in the company. <br /> For example, IT departments use a database and marketing groups use different databases, and these systems cannot communicate with each other. <br /> The system needed to be combined, and we can use database migration.
+
+#### Challenges
+If the company was a long time ago, there might be a lot of complex databases that exist in different parts of the company. <br />
+They may be in different departments and different regions. They can be imported through arguments. <br />
+Part of the database migration task is planning how the company will find heterogeneous databases, normalize data, and transform schemas.
+
+It needs to plan how to test for data loss or corruption that can occur when transferring data from one system to another.
+
+Moving data from one platform to another, the data must be secure. <br />
+Unfortunately, many malicious actors want to touch the personal data we store. <br />
+As part of the migration process, we can choose to encrypt the data or remove personally identifiable information (PII).
+
 ### Web programming
 #### What is Ajax (26.feb.2020)
 Ajax is a web development technique that uses the following.<br /> combinations to create asynchronous web applications.<br />
